@@ -1,0 +1,8 @@
+---
+# tasks file for pull_helloworld
+
+- name: ansible pull for helloworld
+  cron:
+    name: ansible-pull
+    minute: "*/10"
+    job: "/usr/bin/ansible-pull -U https://github.com/jeffreyleeon/ansible helloworld.yml -i localhost --sleep 60"
