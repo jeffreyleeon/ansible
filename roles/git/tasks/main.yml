@@ -1,0 +1,9 @@
+---
+# tasks file for git
+
+- name: Installing git
+  yum:
+    name: git
+    enablerepo: epel
+    state: installed
+  become: yes
